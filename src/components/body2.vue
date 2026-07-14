@@ -11,7 +11,7 @@
           revenue and provide the best payment experience to your customers.
         </h2>
         <div class="button">
-          <a href=" ">Get started</a>
+          <router-link to="/GetStarted" >Get Started</router-link>
         </div>
       </div>
       <div class="middle">

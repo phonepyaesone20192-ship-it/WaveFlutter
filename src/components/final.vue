@@ -1,3 +1,32 @@
+<script setup>
+import { ref } from "vue";
+const isOpen = ref(false);
+const countries = ref([
+  { value: "cameroon", label: "Cameroon", flag: "🇨🇲" },
+  { value: "egypt", label: "Egypt", flag: "🇪🇬" },
+  { value: "ghana", label: "Ghana", flag: "🇬🇭" },
+  { value: "ivory_coast", label: "Ivory Coast", flag: "🇨🇮" },
+  { value: "kenya", label: "Kenya", flag: "🇰🇪" },
+  { value: "malawi", label: "Malawi", flag: "🇲🇼" },
+  { value: "mauritius", label: "Mauritius", flag: "🇲🇺" },
+  { value: "nigeria", label: "Nigeria", flag: "🇳🇬" },
+  { value: "rest_of_europe", label: "Rest of Europe", flag: "🇪🇺" },
+  { value: "rwanda", label: "Rwanda", flag: "🇷🇼" },
+  { value: "senegal", label: "Senegal", flag: "🇸🇳" },
+  { value: "south_africa", label: "South Africa", flag: "🇿🇦" },
+  { value: "tanzania", label: "Tanzania", flag: "🇹🇿" },
+  { value: "uganda", label: "Uganda", flag: "🇺🇬" },
+  { value: "united_kingdom", label: "United Kingdom", flag: "🇬🇧" },
+  { value: "united_states", label: "United States", flag: "🇺🇸" },
+  { value: "zambia", label: "Zambia", flag: "🇿🇲" },
+]);
+const selected = ref(countries.value[0]);
+function selectCountry(country) {
+  selected.value = country;
+  isOpen.value = false;
+}
+</script>
+
 <template>
  
   <footer>
@@ -68,7 +97,28 @@
     <br /><br />
     <hr />
     <br /><br />
-    <button class="footerA">United States</button>
+    <div class="country">
+
+       <div v-if="!isOpen" class="close">
+      <button @click="isOpen = true">
+        {{ selected.flag }} {{ selected.label }} ∨
+      </button>
+    </div>
+    
+    <div v-else class="panel">
+      <div class="trigger" @click="isOpen= false">
+      {{ selected.flag }} {{ selected.label }} ∨
+    </div>
+      <button
+        v-for="country in countries"
+        :key="country.value"
+        @click="selectCountry(country)"
+      >
+        <span class="rFlag">{{ country.flag }}</span> {{ country.label }}
+      </button>
+    </div>
+    </div>
+      
     <button class="footerB">X(formerly Twitter)</button>
     <button class="footerC">Facebook</button>
     <button class="footerC">Instagram</button>
@@ -94,6 +144,7 @@
   </footer>
 </template>
 <style scoped>
+
 footer {
   margin-top: 200px;
 }
@@ -129,11 +180,45 @@ hr {
 
 .footerB,
 .footerC,
-.footerA {
+.close button,.panel button {
   all: unset;
 }
-.footerA {
+.close button{
+  transition:0.2s ease;
+}
+.country {
+  position: absolute;
   margin-left: 115px;
+  ;
+}
+
+.panel {
+  position: absolute;
+  top: -300px;      /* panel opens above */
+  left: 0;
+  width: 700px;
+  padding: 20px;
+  background: white;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.trigger {
+  margin-top: 100px;
+  position: absolute;
+  top: 200px;       /* move it back down to where the closed button is */
+  grid-column: unset;
+  transition:0.2s ease;
+}
+.panel button{
+  font-size: 20px;
+   transition:0.2s ease;
+}
+.trigger:hover,.close button:hover,.panel button:hover{
+  color:#3b82f6;
 }
 .footerB {
   margin-left: 500px;

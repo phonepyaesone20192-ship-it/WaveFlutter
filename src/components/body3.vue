@@ -11,7 +11,7 @@
           a few clicks.
         </h2>
         <div class="button">
-          <a href="">Start selling</a>
+          <router-link to="/StartSelling"> Start selling</router-link>
         </div>
       </div>
       <div class="lLower">
