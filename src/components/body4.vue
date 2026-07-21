@@ -9,7 +9,7 @@
     h1{
       margin:200px 115px 0px 115px;
       font-weight: 10;
-      font-size:110px;
+      font-size:50px;
       color: black;
     }
     span{

@@ -11,11 +11,11 @@
           a few clicks.
         </h2>
         <div class="button">
-          <router-link to="/StartSelling"> Start selling</router-link>
+          <router-link to="StartSelling"> Start selling</router-link>
         </div>
       </div>
       <div class="lLower">
-        <img src="/b3l.png" alt="" />
+        <img src="/big-business.avif" alt="" />
         <br> <br>
         <h3>
           A platform for you, whether you’re a <span class="end1">big business</span> or a <span class="end2">solo artist.</span>
@@ -24,7 +24,7 @@
     </div>
     <div class="right">
       <div class="rUpper">
-        <img src="/b3r.jpg" alt="" />
+        <img src="/ceo.jpg" alt="" />
       </div>
       <div class="rLower">
         <h1>Invoices</h1>
@@ -117,6 +117,10 @@ a {
 .lLower h3{
   font-weight: 500 ;
   padding-left: 100px;
+}
+.lLower img{
+  width: 600px;
+  height: 730px;
 }
 
 .end1{

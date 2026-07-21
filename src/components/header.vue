@@ -1,7 +1,7 @@
 <template>
   <header>
     <ul>
-      <li class="main"><a href="">💠WaveFlutter</a></li>
+      <li class="main"><router-link to="/">💠WaveFlutter</router-link></li>
       <li><a href="">Enterprise</a></li>
       <li><a href="">SME</a></li>
       <li><a href="">Personal</a></li>
@@ -38,6 +38,7 @@ a {
   padding-right: 150px;
   position: relative;
   top: -15px;
+  right: -80px;
   
 }
 

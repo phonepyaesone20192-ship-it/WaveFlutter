@@ -15,15 +15,17 @@
   <div class="endlessImage">
     <div class="upper">
       <div class="left">
-        <router-link to="/contact">Contact sales</router-link>
-        <img src="/endlessImage-left.jpg" alt=" " />
+        <div class="contact">     
+          <router-link to="/contact">Contact sales</router-link>
+        </div>
+        <img src="/sales.avif" alt=" " />
       </div>
       <div class="right">
-        <img src="/endlessImage-right.jpg" alt="" />
+        <img src="/send.jpg" alt="" />
         <p>
           Send money home to loved ones, sell online as a small business,
           process global payments as an enterprise, build financial products as
-          a startup. With Flutterwave, the question isn't what's possible—it is:
+          a startup. With Flutterw  ave, the question isn't what's possible—it is:
           what isn't?
         </p>
       </div>
@@ -91,6 +93,10 @@ body {
 .left,
 .right {
   flex: 1;
+  overflow: hidden;
+}
+.contact{
+  margin-top: 20px;
 }
 
 .left a {
@@ -100,6 +106,7 @@ body {
   border-radius: 10px;
   text-decoration: none;
   margin-left: 110px;
+  margin-top: 20px;
 }
 .left a:hover {
   background: #0A125C;
@@ -110,12 +117,13 @@ body {
   padding: 0px;
 }
 .right img {
-  max-width: 70%;
+  max-width: 88%;
   padding: 0px;
-  margin: 0px 0px 0px 220px;
+  margin: 0px 0px 0px 100px;
+
 }
 .right p {
-  margin-left: 220px;
+  margin-left: 80px;
   margin-top: 20px;
   font-size: 25px;
   font-weight: 10;
@@ -130,11 +138,15 @@ body {
   font-size: 25px;
   color:#475569;
 }
-.lower img {
+.lower .images{
   margin-top: 35px;
-  display:felx;
-  max-width: 130px;
-  padding-right:70px;
+  display:flex;
+   
 }
+.lower img{
+  padding-right:70px;
+  max-width: 130px;
+}
+
 
 </style>

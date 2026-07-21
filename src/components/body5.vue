@@ -47,8 +47,8 @@
     font-weight: 5000;
     font-size: 70px;
     color: black;
-    max-width: 700px;
-    margin: 200px 500px 0px 500px;
+    max-width: 1000px;
+    margin: 200px 300px 0px 470px;
   }
   .coTitle {
     font-weight: 10;
@@ -129,4 +129,8 @@
     font-weight: 5000;
     padding-bottom: 20px;
   }
+  /* part 5 */
+.click-to-show button{
+  margin-left: 115px;
+}
   </style>

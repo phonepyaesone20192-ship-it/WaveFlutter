@@ -15,7 +15,7 @@
         </div>
       </div>
       <div class="middle">
-        <img src="/endlessOrangeImage.png" alt="" />
+        <img src="/banking.png" alt="" />
       </div>
       <div class="right">
         <div class="upper">
@@ -67,7 +67,6 @@ a {
   display: flex;
 }
 .left {
-  flex: 1.3;
   padding-top: 280px;
 }
 .left h1 {
@@ -98,18 +97,20 @@ a {
 }
 
 .middle {
-  flex: 0.3;
-  padding-top: 100px;
+  padding-top: 200px;
+  margin-left: 120px;
+
 }
 .middle img {
-  max-width: 300px;
+  width: 500px;
+  height: 500;
 }
 .right {
-  flex: 1;
+   
   padding-top: 100px;
   display: flex;
   flex-direction: column;
-  margin-left: 90px;
+  margin-left: 100px;
 }
 .upper {
   margin-top: 100px;

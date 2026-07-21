@@ -21,11 +21,15 @@
     <li>Customer verification</li>
   </ul>
 
-  <button type="button">Read the API docs 📁</button>
+  <div class="button"><router-link to="/Api">Read the API docs</router-link></div>
   </div>
 </template>
  
 <style scoped>
+a{
+  text-decoration: none;
+  color: white;
+}
 .content{
   margin-top: 300px;
   margin-left: 115px;
@@ -74,21 +78,17 @@ li::before {
   background-repeat: no-repeat;
   top:10px;
 }
-button{
-  margin-top: 40px;
-  background: #3b82f6;  
-  color: white;
-  padding: 20px 40px;
-  border-radius: 16px;
-  font-size: 20px;
-  font-weight: 500;
-  transition: 0.3s;
-  margin-bottom: 20px;
-  cursor: pointer;
-  margin-left:25px;
-}
-
-button:hover {
+.button{
+      margin:80px 0px 0px 0px;
+    }
+.button a {
+    background: #3b82f6;
+    color: #ffff;
+    padding: 15px 20px 15px 20px;
+    border-radius: 10px;
+    font-size: 20px;
+  }
+.button a:hover {
   background: #0A125C;
 }
 
